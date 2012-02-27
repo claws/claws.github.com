@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Test Post
+tags: [python]
 ---
 
 This is a test post.
