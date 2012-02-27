@@ -1,26 +1,41 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Sctict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="keywords" content="claws, python, programming, home automation, technology" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="claws, blog, python, twisted, programming, technology, tech, frameworks, home automation, technology" />
     <meta name="author" content="claws" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
+    <link rel="alternate" type="application/atom+xml" title="Feed" href="{{ site.url}}/atom.xml" />
     <title>{{ page.title }}</title>
   </head>
-
-  <div id='header'>
-    <div id='sections'>
-      <div>
-        <a href="/about.html">about</a>
-      </div>
-    </div>
-  </div>
-
   <body>
-    <header>
-      <h1><a href="/">claws</a></h1>
-    </header>
-    <section>
-      {{ content }}
-    </section>
+
+    <div id="site">
+      <div id='header'>
+        <div id='nav'>
+          <center>  
+            <a href="/">Home</a>
+            <a href="/resume.html" title="Things I've done professionally">Resume</a>
+            <a href="/about.html" title="About me">About</a>
+            <a href="/atom.xml" rel="subscribe via RSS" title="subscribe via RSS">RSS</a>
+          </center>  
+        </div>
+        <br />
+        <div id="title">
+          <a href="/">claws</a>
+        </div>
+        <br />
+      </div>
+  
+      <div class="clearfix"/>
+  
+      <div class="content">
+        {{ content }}
+      </div>
+
+      <div class="footer"></div>
+
+    </div>
   </body>
 </html>

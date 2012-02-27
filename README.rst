@@ -1,4 +1,5 @@
 Claws' Github Pages
 ===================
 
-Nothing here yet.
+A site where I can muse about random techno-geekery.
+
