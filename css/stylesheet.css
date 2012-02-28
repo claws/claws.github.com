@@ -95,4 +95,18 @@ body {
 	color: #ff2b06;
 }
 
+.posts .post .title{
+        margin-top: 30px;
+        font-size: 20px;
+}
+
+.posts .post .date{
+        margin-left: 10px;
+        font-size: 12px;
+}
+
+.posts .post .snippet{
+        margin-top: 10px;
+        font-size: 14px;
+}
 
