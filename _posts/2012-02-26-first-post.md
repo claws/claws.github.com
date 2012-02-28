@@ -8,6 +8,7 @@ This is a test post.
 
 Testing code section and highlighting:
 
+<figure class='code'><figcaption><span>test.py</span></figcaption>
 {% highlight python %}
 
 import this
@@ -24,5 +25,5 @@ class Test(object):
         return "The test name: %s" % self._name
 
 {% endhighlight %}
-
+</figure>
 
