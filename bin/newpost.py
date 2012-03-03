@@ -6,6 +6,11 @@
 # with default template content ready for user content to
 # be added.
 # 
+# Usage:
+# newpost.py "Title of New Post"
+#
+# Generates a new post using the template, at _posts/YYYY-MM-DD-title_of_new_post.md
+#
 
 
 import datetime
