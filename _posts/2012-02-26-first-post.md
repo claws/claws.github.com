@@ -12,24 +12,24 @@ This is an excerpt from the test post.
 
 Testing code section and highlighting:
 
-{% highlight python %}
+    {% highlight python %}
 
-import this
-
-class Test(object):
-    """
-    Test docstring
-    """
-    def __init__(self, name):
-        self._name = name
-
-    @property
-    def name(self):
-        return "The test name: %s" % self._name
-
-{% endhighlight %}
+    import this
+    
+    class Test(object):
+        """
+        Test docstring
+        """
+        def __init__(self, name):
+            self._name = name
+    
+        @property
+        def name(self):
+            return "The test name: %s" % self._name
+    
+    {% endhighlight %}
 
 Test embedding Youtube video...
 
-{% youtube FJ7QsEytQq4 %}
+<iframe width="640" height="360" src="http://www.youtube.com/embed/FJ7QsEytQq4?rel=0" frameborder="0" allowfullscreen></iframe>
 
