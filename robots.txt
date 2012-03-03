@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://claws.github.com/sitemap.xml

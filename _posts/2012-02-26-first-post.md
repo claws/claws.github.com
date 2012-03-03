@@ -1,14 +1,17 @@
 ---
 layout: post
-title: Test Post
-tags: [python]
+title: "Test Post"
+meta-description: "A simple test post"
+tags: 
+- python
 ---
 
-This is a test post.
+<!-- excerpt start -->
+This is an excerpt from the test post.
+<!-- excerpt end -->
 
 Testing code section and highlighting:
 
-<figure class='code'><figcaption><span>test.py</span></figcaption>
 {% highlight python %}
 
 import this
@@ -25,5 +28,8 @@ class Test(object):
         return "The test name: %s" % self._name
 
 {% endhighlight %}
-</figure>
+
+Test embedding Youtube video...
+
+{% youtube FJ7QsEytQq4 %}
 

@@ -1,28 +1,46 @@
+body {
+	font-family: 'Droid Sans', serif; font-size: 14px;
+	background: #f0f0f0;
+}
 
-a:link    {
-  /* Applies to all unvisited links */
+a:link, a:visitied {
   text-decoration:  none;
   color:            #383838;
 } 
 
-a:visited {
-  /* Applies to all visited links */
-  text-decoration:  none;
-  color:            blue;
-}
- 
-a:hover   {
-  /* Applies to links under the pointer */
+a:hover, a:active {
   text-decoration:  none;
   color:            #ff2b06;
 }
- 
-a:active  {
-  /* Applies to activated links */
-  text-decoration:  none;
-  color:            white;
+
+hr {
+	visibility: hidden;
+} 
+
+p {
+	margin: 14px 0;
 }
 
+em {
+	font-style: italic;
+}
+
+h1 {
+	margin-bottom: 30px;
+	bottom-border: 1px dotted #ddd;
+	font-size: 40px;
+}
+
+h2 {
+	margin-bottom: 20px;
+	bottom-border: 1px dotted #ddd;
+	font-size: 30px;
+}
+
+h3 {
+	margin-bottom: 20px;
+	font-size: 25px;
+}
 
 #site {
 	max-width: 900px;
@@ -43,22 +61,25 @@ a:active  {
 	left: 30px;
 	font-size: 40px;
 	font-weight: bold;
+	opacity: 0.7;
 }
-#title a:link{
-	color: white;
-}
-#title a:visited {
-	color: white;
-}
-#title a:hover {
-	color: white;
-}
-
-body {
-	font-family: 'Droid Sans', serif; font-size: 14px;
+#title a {
+	color: #e0e0e0;
+	text-decoration: none
 }
 
 
+h1 {
+	bottom-border-style: dotted;
+	bottom-border-width: 1px;
+	bottom-border-color: #ddd;
+} 
+
+h2 {
+	bottom-border-style: dotted;
+	bottom-border-width: 1px;
+	bottom-border-color: #ddd;
+} 
 
 #nav {
 	text-align: center;
@@ -74,39 +95,61 @@ body {
 		color-stop(0.47, #C8C8C8),
 		color-stop(0.94, #E6E8E8)
 	);
-	/*-webkit-border-radius: 5px;*/
 	color: #383838;
 	border-top: 1px solid #f2f2f2;
 	border-bottom: 1px solid #8c8c8c;
+	height: 25px;
+}
+
+#nav ul {
+	/* width: 100%; */
+	list-style-type: none;
+	margin: 0;
+	padding: 4px;
+	overflow: hidden;
 }
 
 #nav ul li {
 	display: inline;
-	padding-left: 20px;
 }
 
-#nav a:link{
+
+#nav a:link, #nav a:visited {
 	color: #383838;
+	text-align: center;
+	padding: 5px;
+	text-decoration: none
 }
-#nav a:visited {
-	color: #383838;
-}
-#nav a:hover   {
+#nav a:hover, #nav a:active {
 	color: #ff2b06;
+	text-decoration: none
 }
 
-.posts .post .title{
-        margin-top: 30px;
-        font-size: 20px;
+.post a:link, .post a:visited {
+	color: #383838;
+	text-decoration: none
 }
 
-.posts .post .date{
-        margin-left: 10px;
-        font-size: 12px;
+.post a:hover, .post a:active {
+	color: #ff2b06;
+	text-decoration: none
 }
 
-.posts .post .snippet{
+
+.post .title{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+	text-decoration: none;
+}
+
+.post .date{
+        margin-bottom: 10px;
+}
+
+.post .excerpt{
         margin-top: 10px;
         font-size: 14px;
 }
+
 
