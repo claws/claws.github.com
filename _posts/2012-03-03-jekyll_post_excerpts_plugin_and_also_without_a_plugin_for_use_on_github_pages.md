@@ -11,26 +11,33 @@ _Disclaimer: I've only just started playing with Jekyll. This may be completely 
 <!-- excerpt start -->
 While setting up this blog I wanted to be able to display post excerpts on the main page. I found a few different methods but none really met my needs.
 
-I wanted to be able to use a small section of the post itself as the excerpt. I didn't want to duplicate the post excerpt section. I didn't really want to push it through the strip_html filter because the output didn't look very nice. I didn't want to arbitrarily truncate the text at a certain character limit either.
-
-I found an example of creating a Jekyll/Liquid plugin and modified it to suit my needs. The result is a small Jekyll plugin that extracts text between two html comments that can be used to populate the post extract object on the main page. 
-
-You can find it in this [gist](https://gist.github.com/1964919).
+1. I wanted to be able to use a small section of the post itself as the excerpt. 
+1. I didn't want to duplicate the post excerpt section. 
+1. I didn't want to push it through the Liquid strip_html filter because the output didn't look very nice. 
+1. I didn't want to arbitrarily truncate the text at a certain character limit either.
 <!-- excerpt end -->
 
-<hr />
+I found an example of a Jekyll/Liquid plugin and modified it to suit my needs. The result is a small Jekyll filter plugin that extracts text between two html comments that can be used to populate the post extract on the main page. This worked really well locally where I was testing the web site before uploading it to Github. 
 
+I got everything working locally and was quite pleased. I then pushed the changes to github and FAIL. I got a notification stating <code>unable to run jekyll</code>. That is a cryptic error - completely useless for me to diagnose the cause of the problem. 
 
-_Update: So yeah, I was off track. I got everything working locally, sweet. Pushed to github and FAIL. No plugins allowed - fair enough too actually. That would perhaps explain why I didn't come arcoss anyone doing this before me. Still this might be useful to someone running the site on their own server._
+After searching around I think it was because Github do not allow plugins to run arbitrary functions on their servers - fair enough too actually. I must have missed the part where that was documented. That would perhaps explain why I didn't come arcoss anyone doing this before me. Still this might be useful to someone running the site on their own server.
 
 <script src="https://gist.github.com/1964919.js"> </script>
 
-
 <hr />
 
-To get this working on Github pages without a plugin I applied the same functionality to a line in the <code>index.html</code> page. It can be found in this [gist](https://gist.github.com/1965992).
+So I spent some time removing the references to the plugins so that they would not be run again. This didn't seem to be enough though. I found that I actually had to entirely remove the <code>_plugin</code> directory and it's contents for the uploaded content to be parsed and visible on my github pages site.
+
+I needed to come up with another way of creating the excerpts. 
+
+I investigated the Liquid filters further and worked out a way to use the strip function to the same effect as the plugin.
 
 <script src="https://gist.github.com/1965992.js"> </script>
 
-After making the first round of changes which were based on plugins I kept getting <code>unable to run jekyll</code> errors whenever I tried to push. I managed to resolve this by removing the _plugins directory and its content. Correlation/causation? I think these were causing the problems but I guess I'll never know.
+<hr />
+
+Once again this worked fine locally so I pushed it to Github - only to find that the strip function does not appear to be working in the version of Liquid used at Github. This is detailed [here](https://github.com/mojombo/jekyll/issues/502) and [here](https://github.com/Shopify/liquid/issues/92).
+
+So for the time being I have no excerpts.
 

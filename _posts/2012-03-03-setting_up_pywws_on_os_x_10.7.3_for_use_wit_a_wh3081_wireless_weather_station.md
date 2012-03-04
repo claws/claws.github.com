@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Setting up pywws on OS X 10.7.3 for use with a WH3081"
+title: "Setting up pywws on OS X 10.7.3 for use with a WH3081 wireless weather station"
 tags: 
 - python
 - home automation
