@@ -6,7 +6,7 @@ tags:
 meta-description: "Creating a post excerpt filter plugin for Jekyll and the same functionality for use on Github pages without a plugin"
 ---
 
-_Disclaimer: I've only just started playing with Jekyll. This may be completely of track but it worked for me - until I find something better._
+_Disclaimer: I've only just started playing with Jekyll. This may be completely off track but it worked for me - until I find something better._
 
 <!-- excerpt start -->
 While setting up this blog I wanted to be able to display post excerpts on the main page. I found a few different methods but none really met my needs.

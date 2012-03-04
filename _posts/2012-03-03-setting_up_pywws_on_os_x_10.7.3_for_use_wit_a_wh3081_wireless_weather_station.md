@@ -8,7 +8,7 @@ meta-description: "Instructions for getting a WH3081 wireless weather station wo
 ---
 
 <!-- excerpt start -->
-This post details how I installed and configured software dependecies that will eventually allow me to upload data, received from my WH3081 wireless weather station, to my [feed](https://pachube.com/feeds/42745) at Pachube. It is mostly just so I remember how I did it but also because using OS X with the weather station is not the typical use case for pywws.
+This post details how I installed and configured software dependencies that will eventually allow me to upload data, received from my WH3081 wireless weather station, to my [feed](https://pachube.com/feeds/42745) at Pachube. It is mostly just so I remember how I did it but also because using OS X with the weather station is not the typical use case for pywws.
 <!-- excerpt end -->
 
 To use pywws on OS X requires the use of hidapi to communicate with the USB device. This means that cython-hidapi and hence Cython are required dependencies that must be install prior to going anywhere near pywws.
