@@ -5,7 +5,7 @@ layout: nil
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
-  <title>claws</title>
+  <title>metaclaws</title>
   <link href="{{ site.url }}"/>
   <link type="application/atom+xml" rel="self" href="{{ site.url }}/atom.xml"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
@@ -23,7 +23,7 @@ layout: nil
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
       <name>Chris Laws</name>
-      <uri>http://claws.github.com/</uri>
+      <uri>http://www.metaclaws.com/</uri>
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
