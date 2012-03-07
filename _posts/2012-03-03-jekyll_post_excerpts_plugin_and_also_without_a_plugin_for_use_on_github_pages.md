@@ -11,10 +11,10 @@ _Disclaimer: I've only just started playing with Jekyll. This may be completely 
 <!-- excerpt start -->
 While setting up this blog I wanted to be able to display post excerpts on the main page. I found a few different methods but none really met my needs.
 
-1. I wanted to be able to use a small section of the post itself as the excerpt. 
-1. I didn't want to duplicate the post excerpt section. 
-1. I didn't want to push it through the Liquid strip_html filter because the output didn't look very nice. 
-1. I didn't want to arbitrarily truncate the text at a certain character limit either.
+- I wanted to be able to use a small section of the post itself as the excerpt. 
+- I didn't want to duplicate the post excerpt section. 
+- I didn't want to push it through the Liquid strip_html filter because the output didn't look very nice. 
+- I didn't want to arbitrarily truncate the text at a certain character limit either.
 <!-- excerpt end -->
 
 I found an example of a Jekyll/Liquid plugin and modified it to suit my needs. The result is a small Jekyll filter plugin that extracts text between two html comments that can be used to populate the post extract on the main page. This worked really well locally where I was testing the web site before uploading it to Github. 

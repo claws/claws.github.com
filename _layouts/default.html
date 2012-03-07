@@ -6,12 +6,11 @@
     <meta name="author" content="claws" />
     <meta name="description" content="{{ page.meta-description }}" />
     <link rel="canonical" href="{{page.url | canonical }}" />
-    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans|Ubuntu">
-    <!-- <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu"> -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans">
     <link rel="alternate" type="application/atom+xml" title="Feed" href="{{ site.url}}/atom.xml" />
-    <!-- <link rel="apple-touch-icon" href="http://doingthedishes.com/apple-touch-icon.png" /> -->
+    <!-- <link rel="apple-touch-icon" href="http://www.metaclaws.com/apple-touch-icon.png" /> -->
     <title>{{ page.title }}</title>
   </head>
   <body>
@@ -22,23 +21,23 @@
             <li><a href="/">Home</a></li>
             <li><a href="/archive.html" title="Archive">Archive</a></li>
             <li><a href="/tags.html" title="Categories">Categories</a></li>
+            <li><a href="/projects.html" title="Projects">Projects</a></li>
             <li><a href="/about.html" title="About me">About</a></li>
             <li><a href="/resume.html" title="Things I've done professionally">Resume</a></li>
             <li><a href="/sitemap.xml" title="Sitemap">Sitemap</a></li>
-            <li><a href="/atom.xml" rel="subscribe via RSS" title="subscribe via RSS"><img src="/images/rss.png" alt="RSS" height="18" width="18" style="vertical-align:middle" /></a></li>
+            <li><a href="/atom.xml" rel="subscribe via RSS" title="subscribe via RSS">Rss</a></li>
           </ul>
         </div>
-        <div id="title_image">
-          <div id="title">
+        <div id="logo_image">
+          <div id="logo_text">
             <a href="/">metaclaws</a>
           </div>
         </div>
-        <br />
       </div>
+      <br />
       <div id="content">
         {{ content }}
       </div>
-      <div class="footer"></div>
-    </div>
+      <div class="footer">Copyright (c) 2012 metaclaws.com. Hosted on <a href="https/www.github.com">github.com</a>. Design adapted from <a href="http://www.freecsstemplates.org/">CSS Templates</a></div>
   </body>
 </html>
