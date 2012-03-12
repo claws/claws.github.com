@@ -17,7 +17,7 @@ meta-description: "Chris Laws' tech blog. Typical topics covered here are Python
     <hr class="clearfix" />
     <div class="post">
       <div class="title"><a href="{{ post.url }}">{{post.title }}</a></div>
-      <div class="date">Posted on {{ post.date | date: "%B %d %Y" }}</div>
+      <div class="date">Posted on {{ post.date | date: "%B %d %Y" }} &nbsp|&nbsp<a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.disqus-identifier }}">Comments</a></div>
       <!-- Liquid filter split seems to be broken on github pages but it works locally, how annoying  -->
       <!-- see https://github.com/mojombo/jekyll/issues/502                                           -->
       <!-- see https://github.com/Shopify/liquid/issues/92                                            -->
@@ -28,4 +28,14 @@ meta-description: "Chris Laws' tech blog. Typical topics covered here are Python
   {% endfor %}
 </div>
 
+<script type="text/javascript">
+    var disqus_shortname = 'metaclaws'; 
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 

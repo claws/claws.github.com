@@ -22,6 +22,9 @@ layout: post
 title: \"%(title)s\"
 tags: []
 meta-description: 
+# Don't change the disqus identifier even if the url changes. It uniquely
+# associates comments with the post.
+disqus-identifier: \"%(disqus_identifier)s\"
 ---
 
 <!-- except start -->
@@ -44,6 +47,9 @@ if __name__ == "__main__":
     date_string = datetime.datetime.now().strftime("%Y-%m-%d")
     title = sys.argv[1]
     post_filename = os.path.join(repo_root, "_posts", "%s-%s.md" % (date_string, title.lower().replace(" ", "_")))
+    # create a label for disqus comments, this should remain the same
+    # even if the post file name, and hence the url, change.
+    disqus_identifier = title.lower().replace(" ", "_")
 
     if os.path.exists(post_filename):
         # very unlikely
@@ -51,7 +57,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     fd = open(post_filename, 'w')
-    fd.write(post_template % {'title':title})
+    fd.write(post_template % {'title':title, 'disqus_identifier':disqus_identifier})
     fd.close()
 
     print "Created new post file: %s" % post_filename

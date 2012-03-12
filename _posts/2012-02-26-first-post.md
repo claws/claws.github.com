@@ -2,6 +2,7 @@
 layout: post
 title: "Test Post"
 meta-description: "A simple test post"
+disqus-identifier: "test_post"
 tags: 
 - python
 ---
