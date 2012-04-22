@@ -27,9 +27,9 @@ meta-description:
 disqus-identifier: \"%(disqus_identifier)s\"
 ---
 
-<!-- except start -->
+<!-- excerpt start -->
 
-<!-- except end -->
+<!-- excerpt end -->
 
 """
 
