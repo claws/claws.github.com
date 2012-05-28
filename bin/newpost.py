@@ -20,7 +20,8 @@ import sys
 post_template = """---
 layout: post
 title: \"%(title)s\"
-tags: []
+tags:
+ - 
 meta-description: 
 # Don't change the disqus identifier even if the url changes. It uniquely
 # associates comments with the post.
