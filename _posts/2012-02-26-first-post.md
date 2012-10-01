@@ -5,6 +5,7 @@ meta-description: "A simple test post"
 disqus-identifier: "test_post"
 tags: 
 - python
+summary: Just testing
 ---
 
 <!-- excerpt start -->

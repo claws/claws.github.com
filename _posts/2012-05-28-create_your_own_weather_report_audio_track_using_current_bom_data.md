@@ -10,6 +10,7 @@ meta-description:
 # Don't change the disqus identifier even if the url changes. It uniquely
 # associates comments with the post.
 disqus-identifier: "create_your_own_weather_report_audio_track_using_current_bom_data"
+summary: A method for generating your own spoken word weather report using data from the Australian BoM
 ---
 
 <!-- excerpt start -->

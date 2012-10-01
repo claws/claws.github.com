@@ -2,24 +2,53 @@
 layout: default
 ---
 
-<div class="post">
-  <div class="title">{{ page.title }}</div>
-  <div class="date">{{ page.date | date: "%B %d %Y" }}</div>
-  <div class="main">
-    {{ content }}
-  </div>
-  <g:plusone annotation="inline"></g:plusone>
-  <hr />
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname = 'metaclaws'; 
-    var disqus_url = 'http://metaclaws.com{{ page.url }}';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+      <div class="container">
+      
+        <div class="row">
+          <div class="span12">
+            <h2>{{ page.title }}</h2>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span12">
+            <p class="muted">
+              Posted {{ page.date | date: "%B %d %Y" }}
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span12">
+            {{ content }}
+          </div>
+        </div>
+        
+        <br />
+        
+        <div class="row">
+          <div class="span12">
+           <p>
+             <g:plusone size="medium"></g:plusone>
+             &nbsp;
+             <a href="https://twitter.com/share" class="twitter-share-button" data-via="clawsicus">Tweet</a>
+           </p>
+          </div>
+        </div>
+
+        <hr>
+        
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'metaclaws'; 
+          var disqus_url = 'http://metaclaws.com{{ page.url }}';
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      </div>

@@ -6,6 +6,7 @@ tags:
 - home automation
 meta-description: "Instructions for getting a WH3081 wireless weather station working on OS X 10.7.3 with pywws" 
 disqus-identifier: "setting_up_pywws_on_os_x_10.7.3_for_use_with_a_wh3081_wireless_weather_station"
+summary: My notes about getting pywws working on OS X 10.7.3
 ---
 
 <!-- excerpt start -->

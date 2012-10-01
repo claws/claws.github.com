@@ -8,6 +8,7 @@ meta-description:
 # Don't change the disqus identifier even if the url changes. It uniquely
 # associates comments with the post.
 disqus-identifier: "only_days_until_pycon_australia"
+summary: Yay, work is paying for me to go to PyCon Australia 2012 in Hobart!
 ---
 
 <center><a href="http://2012.pycon-au.org/"><img src="/resources/pyconau_logo.png" height="50px" width="50px" /></a></center>

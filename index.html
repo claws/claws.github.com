@@ -4,29 +4,27 @@ title: "metaclaws"
 meta-description: "Chris Laws' tech blog. Typical topics covered here are Python, Programming, Linux, OS X, Twisted, Home Automation, etc."
 ---
 
-<div id="welcome">
-  <h3>Welcome</h3>
-  <p>This is my small piece of the interwebs where I can post about techno-geekery and other things I find interesting.</p>
-  <p>On the rare occasion I get some spare time at home, I enjoy tinkering around on my computer or messing around in the shed. That could involve writing some software (mostly in Python), re-wiring a Fisher and Paykel smart drive motor for use in a Savonius style wind generator or perhaps doing some genealogy research. Whatever it might be, if I think it's interesting I'll try to post about it here.</p>
-  <br class="clearfix" />
-</div>
 
-<div class="posts">
-  <h3>Recent Posts</h3>
-  {% for post in site.posts limit:5 %}
-    <hr class="clearfix" />
-    <div class="post">
-      <div class="title"><a href="{{ post.url }}">{{post.title }}</a></div>
-      <div class="date">Posted on {{ post.date | date: "%B %d %Y" }} &nbsp|&nbsp<a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.disqus-identifier }}">Comments</a></div>
-      <!-- Liquid filter split seems to be broken on github pages but it works locally, how annoying  -->
-      <!-- see https://github.com/mojombo/jekyll/issues/502                                           -->
-      <!-- see https://github.com/Shopify/liquid/issues/92                                            -->
-      <!-- if it ever gets fixed then post extracts should begin working again                        -->
-      <div class="excerpt">{{ post.content | split:'<!-- excerpt end -->' | first | split:'<!-- excerpt start -->' | last }}</div>
-      <p><a href="{{post.url}}">Read more »</a></p>
-    </div> 
-  {% endfor %}
-</div>
+
+      <div class="container">
+        <h2>Recent Posts</h2>
+        <table class="table table-striped">
+          <tbody>
+            {% for post in site.posts limit:5 %}
+            <tr>
+              <td>
+                <h4><a href="{{ post.url }}">{{post.title }}</a></h4>
+                <p class="muted"><small>Posted on {{ post.date | date: "%B %d %Y" }}</small></p>
+
+                <p><strong>Summary:</strong>&nbsp;{{ post.summary }}</p>
+                
+                <p><small><a href="{{post.url}}">Read more&nbsp;<i class="icon-chevron-right"></i><i class="icon-chevron-right"></i></a></small></p>              
+              </td>
+            </tr> 
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
 
 <script type="text/javascript">
     var disqus_shortname = 'metaclaws'; 

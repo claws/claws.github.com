@@ -26,6 +26,7 @@ meta-description:
 # Don't change the disqus identifier even if the url changes. It uniquely
 # associates comments with the post.
 disqus-identifier: \"%(disqus_identifier)s\"
+summary: A short description of the post
 ---
 
 <!-- excerpt start -->

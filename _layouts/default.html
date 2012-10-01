@@ -3,13 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="keywords" content="claws, blog, python, twisted, programming, technology, tech, frameworks, home automation, technology" />
-    <meta name="author" content="claws" />
+    <meta name="author" content="metaclaws" />
     <meta name="description" content="{{ page.meta-description }}" />
     <link rel="canonical" href="{{page.url | canonical }}" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
     <link rel="alternate" type="application/atom+xml" title="Feed" href="{{ site.url}}/atom.xml" />
+    
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-precomposed-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-precomposed-72x72.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-precomposed-114x114.png" />
@@ -34,32 +45,124 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
       })();
     </script>
+    
+    <style type="text/css">
+    body {
+      padding-top: 0px;
+      padding-bottom: 40px;
+    }
+    .main {
+      background-image: url('/images/banner.jpg');
+      background-repeat: repeat-x;
+      padding-top: 40px;
+      padding-bottom: 30px;
+      margin-top: 0px;
+    }
+    .main .header {
+      color: #fff;
+      opacity: 0.8;
+      text-shadow: 0px 2px 1px #3F372B;
+      padding: 10px 15px 10px 15px;
+      text-decoration: none;
+      
+    }
+    .main .header a:action, .main .header a:hover {
+      color: #000;
+      text-decoration: none;
+    }
+    .main .header a:link, .main .header a:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+    .navbar-fixed-top {
+      margin-bottom: 0px;
+    }
+    
+    </style>
+  
   </head>
+  
   <body>
-    <div id="site">
-      <div id='header'>
-        <div id='nav'>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/archive.html" title="Archive">Archive</a></li>
-            <li><a href="/tags.html" title="Categories">Categories</a></li>
-            <li><a href="/projects.html" title="Projects">Projects</a></li>
-            <li><a href="/about.html" title="About me">About</a></li>
-            <li><a href="/resume.html" title="Things I've done professionally">Resume</a></li>
-            <li><a href="/sitemap.xml" title="Sitemap">Sitemap</a></li>
-            <li><a href="/atom.xml" rel="subscribe via RSS" title="subscribe via RSS">Rss</a></li>
-          </ul>
-        </div>
-        <div id="logo_image">
-          <div id="logo_text">
-            <a href="/">metaclaws</a>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/" title="metaclaws.com">metaclaws</a>
+          <div class="nav-collapse">
+            <!-- .nav, .navbar-search, .navbar-form, etc -->
+            <ul class="nav">
+              <li class=""><a href="/archive.html" title="Posts">Posts</a></li>
+              <li class=""><a href="/tags.html" title="Categories">Categories</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" title="About me & contact options" data-toggle="dropdown">Me <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li class=""><a href="/about.html" title="About">About</a></li>
+                  <li class=""><a href="/projects.html" title="Projects">Projects</a></li>
+                  <li class=""><a href="/resume.html" title="Resume">Resume</a></li>
+                  <li class="divider"></li>
+                  <li class=""><a href=""mailto:clawsicus@gmail.com"" rel="tooltip" title="Send an email" target="_blank">Email</a></li>
+                  <li class=""><a href="https://plus.google.com/u/0/115622027870768400585/posts" rel="tooltip" title="Follw me on Google+">Google+</a></li>
+                  <li class=""><a href="http://www.twitter.com/clawsicus" rel="tooltip" title="Go to twitter.com/clawsicus">Twitter</a></li>
+                  <li class=""><a href="http://github.com/claws" rel="tooltip" title="Go to github.com/claws">GitHub</a></li>
+                  <li class=""><a href="http://www.last.fm/user/armoured" rel="tooltip" title="See what I'm listening to">Last.fm</a></li>
+                  <li class=""><a href="http://cosm.com/feeds/42745" rel="tooltip" title="Go to my Cosm feed">Cosm</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav pull-right">
+              <li class=""><a href="/sitemap.xml" title="Site map"><i class="icon-sitemap"></i></a></li>
+              <li class=""><a href="/atom.xml" title="RSS feed"><i class="icon-rss"></i></a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <br />
-      <div id="content">
-        {{ content }}
-      </div>
-      <div class="footer">Copyright (c) 2012 metaclaws.com. Hosted on <a href="https/www.github.com">github.com</a>. Design adapted from <a href="http://www.freecsstemplates.org/">CSS Templates</a></div>
+    </div>
+    
+      <div class="main">
+        <div class="row">
+          <div class="span12">
+            <div class="header">
+              <p><strong>Techno-geekery and other things...</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>    
+
+
+      {{ content }}
+      
+      <hr>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="span4 offset4">
+              <small>
+                <center>
+                  <p class="muted">Another twitter bootstrap derived site.</a>.</p>
+                  <p class="muted">Hosted on <a href="https://www.github.com">github.com</a>.</p>
+                  <p class="muted">&copy; metaclaws 2012.</p>
+                </center>
+              </small>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+
+      
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/js/bootstrap.min.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
   </body>
 </html>

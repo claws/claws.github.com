@@ -5,6 +5,7 @@ tags:
 - blog
 meta-description: "Creating a post excerpt filter plugin for Jekyll and the same functionality for use on Github pages without a plugin"
 disqus-identifier: "jekyll_post_excerpts_plugin_and_also_without_a_plugin_for_use_on_github_pages"
+summary: A method for extracting post except/summary data from a post without a plugin - useful on Github
 ---
 
 _Disclaimer: I've only just started playing with Jekyll. This may be completely off track but it worked for me - until I find something better._

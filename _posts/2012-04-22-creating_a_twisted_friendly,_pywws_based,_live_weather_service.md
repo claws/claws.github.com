@@ -11,6 +11,7 @@ meta-description: "A Python Twisted friendly, pywws based, live weather station"
 # Don't change the disqus identifier even if the url changes. It uniquely
 # associates comments with the post.
 disqus-identifier: "creating_a_twisted_friendly,_pywws_based,_live_weather_service"
+summary: Twistify'ing pywws (converting synchronous to asynchronous, where possible)
 ---
 
 <!-- excerpt start -->
