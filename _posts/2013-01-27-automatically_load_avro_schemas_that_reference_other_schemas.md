@@ -30,6 +30,11 @@ So one method to avoid this problem would be to simply load all system types in 
 The method I used to automatically load schemas, without needing to have earlier loaded up the lower level schemas is as follows:
 
 {% highlight python %}
+
+import json
+import os
+from avro import schema
+
 def load_schema(file_path, names=None):
     '''
     Load a schema file and return a schema object. The schema can
