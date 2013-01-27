@@ -29,7 +29,7 @@ So one method to avoid this problem would be to simply load all system types in 
 
 The method I used to automatically load schemas, without needing to have earlier loaded up the lower level schemas is as follows:
 
-```python
+{% highlight python %}
 def load_schema(file_path, names=None):
     '''
     Load a schema file and return a schema object. The schema can
@@ -117,7 +117,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-```
+{% endhighlight %}
 
 The loading mechanism simply catches the exceptions from loading the top level schema and inspects the error to determine the dependency file to load. This is performed recursively until the schema is loaded.
 
@@ -128,7 +128,7 @@ Having a flat schema available means that, once processed, only one file needs t
 To test this method, create the following files in the same directory as the code script:
 
 executable.avsc
-```
+{% highlight javascript %}
 {
     "type": "record",
     "name": "executable",
@@ -138,10 +138,10 @@ executable.avsc
         {"name": "instance" , "type": ["int", "null"]}
     ]
 }
-```
+{% endhighlight %}
 
 header.avsc
-```
+{% highlight javascript %}
 {
     "type": "record",
     "name": "header",
@@ -153,10 +153,10 @@ header.avsc
         {"name": "target" , "type": "a_namespace.executable"}
     ]
 }
-```
+{% endhighlight %}
 
 example_msg.avsc
-```
+{% highlight javascript %}
 {
     "type": "record",
     "namespace": "a_namespace",
@@ -168,7 +168,7 @@ example_msg.avsc
         {"name": "value", "type": ["long", "null"]}
     ]
 }
-```
+{% endhighlight %}
 
 These avro schemas define an example message that depends on a header schema which in turn depends on a executable schema. 
 
