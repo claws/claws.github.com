@@ -46,11 +46,18 @@
       })();
     </script>
     
+    <!-- Set padding for normal desktop view and prevent the padding -->
+    <!-- from displaying when screen size is small                   -->
     <style type="text/css">
-    body {
-      padding-top: 0px;
-      padding-bottom: 40px;
-    }
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      @media (max-width: 979px) {
+        body {
+          padding-top: 0;
+        }
+      }
     .main {
       background-image: url('/images/banner.jpg');
       background-repeat: repeat-x;

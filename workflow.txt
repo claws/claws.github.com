@@ -1,0 +1,15 @@
+
+
+Setup and configuration:
+
+Install Pygments to provide code highlighting. Download from http://pypi.python.org/pypi/Pygments and then install using 'sudo python setup.py install'
+
+
+jekyll --server --auto
+
+See https://github.com/mojombo/jekyll/wiki/Configuration for jekyll configration options.
+
+Create a new post:
+./bin/newpost.py "The title of the post"
+This will create a new post entry file in the _post directory.
+
