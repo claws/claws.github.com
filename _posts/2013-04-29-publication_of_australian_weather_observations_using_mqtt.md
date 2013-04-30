@@ -8,7 +8,7 @@ meta-description:
 # Don't change the disqus identifier even if the url changes. It uniquely
 # associates comments with the post.
 disqus-identifier: "publication_of_australian_weather_observations_using_mqtt"
-summary: How MQTT can be used to publish Australian weather observation data
+summary: This post covers how the Australian Bureau of Meteorology could publish weather observation data in a small, efficient format to many receivers. Publishing data in this manner would make it very simple for mobile applications and automated systems to efficiently obtain BoM data.
 ---
 
 
@@ -25,7 +25,7 @@ This post covers how the Australian Bureau of Meteorology could publish weather 
 
 I retrieve data from the BoM for use with my home automation system. I built [txbom](https://github.com/claws/txBOM), a Python Twisted library, to help me do this. I use the BoM forecast and current observation data, combined with calendar events, to construct a specifically formatted text file that is pushed through text-to-speech, saved as MP3 and finally played as the first track in my morning alarm play-list.
 
-My home automation system has similarities to architectures I use as work. Consequently it is almost exclusively built on a [ZMQ](www.zeromq.org) architecture with automatic application and service discovery. However I recently bought some Arduinos and a Raspberry Pi to play around with and to extend my home automation system. As the majority of my home automation system is built on ZMQ I naturally began looking for ZMQ libraries for Arduino and Raspberry Pi. Not finding a good candidate for the Arduino I widened my search and came across [MQTT](www.mqtt.org).
+My home automation system has similarities to architectures I use as work. Consequently it is almost exclusively built on a [ZMQ](http://www.zeromq.org) architecture with automatic application and service discovery. However I recently bought some Arduinos and a Raspberry Pi to play around with and to extend my home automation system. As the majority of my home automation system is built on ZMQ I naturally began looking for ZMQ libraries for Arduino and Raspberry Pi. Not finding a good candidate for the Arduino I widened my search and came across [MQTT](http://www.mqtt.org).
 
 From the MQTT site:
 
