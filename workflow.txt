@@ -1,15 +1,21 @@
+Install Ruby and Python-Pygments to provide code highlighting:
+
+    $ sudo apt-get install ruby1.9.1-dev python-pygments
+
+Then install Jekyll and rdiscount markdown using RubyGems:
+
+    $ sudo gem install jekyll
+    $ sudo gem install rdiscount
 
 
-Setup and configuration:
+For Jekyll install and configuration instructions see http://jekyllrb.com/docs/home/.
 
-Install Pygments to provide code highlighting. Download from http://pypi.python.org/pypi/Pygments and then install using 'sudo python setup.py install'
+To start a local Jekyll web server to preview blog posts priot to pushing to Github use:
 
+    $ jekyll serve --watch
 
-jekyll --server --auto
+To create a new post:
 
-See https://github.com/mojombo/jekyll/wiki/Configuration for jekyll configration options.
+    $ ./bin/newpost.py "The title of the post"
 
-Create a new post:
-./bin/newpost.py "The title of the post"
-This will create a new post entry file in the _post directory.
-
+This creates a new post entry file in the _post directory.
